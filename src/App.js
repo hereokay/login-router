@@ -3,6 +3,7 @@ import { Link, Route, Switch, BrowserRouter as Router } from "react-router-dom";
 import Home from "./Home";
 import About from "./About";
 import NotFound from "./NotFound";
+import Profile from "./Profile";
 
 function App() {
   return (
@@ -14,6 +15,9 @@ function App() {
         <Link to="/about">
           <button>About</button>
         </Link>
+        <Link to="/profile">
+          <button>Profile</button>
+        </Link>
         <Link to="/users">
           <button>Users</button>
         </Link>
@@ -23,6 +27,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/about" component={About} /> 
+          <Route path="/profile" component={Profile} />
           <Route component={NotFound} />  {/* default page*/}
         </Switch>
       </main>
